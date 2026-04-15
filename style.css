@@ -1,135 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Vishalini Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-        }
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        /* Navbar */
-        nav {
-            background: #222;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
+/* Body */
+body {
+    background: linear-gradient(to right, #eef2f3, #ffffff);
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #1f1f1f;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        nav a:hover {
-            color: #00adb5;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: #00adb5;
-            color: white;
-        }
+nav a:hover {
+    color: #00c9a7;
+}
 
-        .hero h1 {
-            font-size: 40px;
-        }
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #00c9a7, #007cf0);
+    color: white;
+}
 
-        /* Section */
-        .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
 
-        /* Cards */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
 
-        .card h3 {
-            color: #00adb5;
-        }
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
 
-        /* Footer */
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
-</head>
-<body>
+/* Card Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
 
-<!-- Navbar -->
-<nav>
-    <a href="#">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
+/* Cards */
+.card {
+    background: #ffffff;
+    width: 260px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
 
-<!-- Hero Section -->
-<div class="hero">
-    <h1>Hi, I'm Vishalini 👋</h1>
-    <p>Electronics & Communication Engineering Student</p>
-    <p>Passionate about IoT, Embedded Systems & Innovation</p>
-</div>
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
 
-<!-- Projects -->
-<div class="section" id="projects">
-    <h2>My Projects</h2>
-    <div class="container">
-        <div class="card">
-            <h3>Garbage Monitoring</h3>
-            <p>IoT system to track waste levels using sensors.</p>
-        </div>
-        <div class="card">
-            <h3>Smart Street Light</h3>
-            <p>Automatic lighting system using LDR sensors.</p>
-        </div>
-    </div>
-</div>
+.card h3 {
+    color: #007cf0;
+    margin-bottom: 10px;
+}
 
-<!-- Skills -->
-<div class="section" id="skills">
-    <h2>Skills</h2>
-    <div class="container">
-        <div class="card">C Programming</div>
-        <div class="card">Python</div>
-        <div class="card">Java</div>
-        <div class="card">Embedded Systems</div>
-    </div>
-</div>
+/* Contact */
+.contact p {
+    font-size: 16px;
+    margin: 8px 0;
+}
 
-<!-- Contact -->
-<div class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email: vishalinitmav@gmail.com</p>
-    <p>Phone: +91 8870858908</p>
-</div>
+/* Footer */
+footer {
+    background: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
 
-<!-- Footer -->
-<footer>
-    <p>© 2026 Vishalini | Portfolio</p>
-</footer>
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
 
-</body>
-</html>
+    .card {
+        width: 90%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
